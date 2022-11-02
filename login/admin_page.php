@@ -44,35 +44,25 @@ window.onload = function() {
       setTheme(this.value);
    });
 }
+   </script>
 
-      //jQuerry stuff here
+   <script type="text/javascript">
+      //jQuery stuff here
 
 $(document).ready(function() {
 $('#theme-select').on('change', function() {
-var themeSel = $('#theme-select').val();
-if(themeSel!=""){
+   var themeSel = $('#theme-select').val();
+
    $.ajax({
-      url: "config.php",
+      url: "update_ajax.php",
       type: "POST",
-      data: {
-         theme: themeSel           
-      },
-      cache: false,
-      success: function(dataResult){
-         var dataResult = JSON.parse(dataResult);
-         if(dataResult.statusCode==200){
-            $("#theme-select").removeAttr("disabled");                 
-         }
-         else if(dataResult.statusCode==201){
-            alert("Error occured !");
-         }
-         
+      data: { 'theme': themeSel, 'id': <?php echo $_SESSION['id']?> },
+      cache: false, 
+      success: function()
+      	 {
+         alert("ok");
       }
    });
-   }
-   else{
-      alert('Please fill all the field !');
-   }
 });
 });
 
@@ -95,7 +85,9 @@ if(themeSel!=""){
       <p>this is an admin page</p>
       <a href="login_form.php" class="btn">login</a>
       <a href="register_form.php" class="btn">register</a>
-      <a href="logout.php" class="btn">logout</a><br><br>
+      <a href="logout.php" class="btn">logout</a>
+      <a href="settings_form.php" class="btn">settings</a>
+<br><br>
 
       <select name="theme-select" id="theme-select" class="btn" onload="setTheme(this.value);">
        <option value="light" class="btn">Light</option>

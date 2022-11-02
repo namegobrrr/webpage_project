@@ -2,10 +2,10 @@
 
 ## varas hechas:
 - Pagina de inicio: SI.
-- Sección de registro, con datos personales: SI?
-- Sección Login/Logout: SI?
-- Configuración de usuario, contraseña, foto, etc.: NO.
-- Tenga un modo Dark/Light: En proceso.
+- Sección de registro, con datos personales: SI
+- Sección Login/Logout: SI
+- Configuración de usuario, contraseña, foto, etc.: SI.
+- Tenga un modo Dark/Light: SI.
 
 ## Instrucciones:
 1. Copiar documento `login` dentro de la carpeta `htdocs`.

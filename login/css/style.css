@@ -3,22 +3,26 @@
 :root,
    :root.light{
       --bg-color: #fff;
+      --bg2-color:  #eee;
       --fg-color: #333;
       --acc-color: crimson;
    }
    :root.dark{
-      --bg-color: #000;
+      --bg-color: #111;
+      --bg2-color: #000 ;
       --fg-color: #ddd;
       --acc-color: crimson;
    }
    :root.gruvbox{
       --bg-color: #1d2021;
+      --bg2-color: #282828;
       --fg-color: #ebdbb2;
       --acc-color: #fb4934;
    }
-   :root.catpuccin{
-      --bg-color: #24273A;
-      --fg-color: #CAD3F5;
+   :root.mocha{
+      --bg-color: #181825;
+      --bg2-color: #1E1E2E;
+      --fg-color: #CDD6F4;
       --acc-color: #ED8796;
    }
 
@@ -56,7 +60,7 @@
 
 .container .content h3 span{
    background: var(--acc-color);
-   color:#fff;
+   color:var(--bg-color);
    border-radius: 5px;
    padding:0 15px;
 }
@@ -78,7 +82,7 @@
 .container .content .btn{
    display: inline-block;
    padding:10px 30px;
-   font-size: 20px;
+   font-size: 15px;
    background: var(--fg-color);
    color: var(--bg-color);
    margin:0 5px;
@@ -96,14 +100,14 @@
    justify-content: center;
    padding:20px;
    padding-bottom: 60px;
-   background: #eee;
+   background: var(--bg2-color);
 }
 
 .form-container form{
    padding:20px;
    border-radius: 5px;
    box-shadow: 0 5px 10px rgba(0,0,0,.1);
-   background: #fff;
+   background: var(--bg-color);
    text-align: center;
    width: 500px;
 }
@@ -121,12 +125,14 @@
    padding:10px 15px;
    font-size: 17px;
    margin:8px 0;
-   background: #eee;
+   background: var(--bg2-color);
+   color: var(--fg-color);
    border-radius: 5px;
 }
 
 .form-container form select option{
-   background: #fff;
+   background: var(--bg-color);
+   color: var(--fg-color);
 }
 
 .form-container form .form-btn{
@@ -139,7 +145,7 @@
 
 .form-container form .form-btn:hover{
    background: var(--acc-color);
-   color:#fff;
+   color:var(--bg-color);
 }
 
 .form-container form p{
@@ -156,7 +162,7 @@
    margin:10px 0;
    display: block;
    background: var(--acc-color);
-   color:#fff;
+   color:var(--bg-color);
    border-radius: 5px;
    font-size: 20px;
    padding:10px;
@@ -167,7 +173,7 @@
    width: 100%;
    position: fixed;
    overflow: hidden;
-   padding:10px;
+   padding:5px;
 }
 
 .topbar .content{

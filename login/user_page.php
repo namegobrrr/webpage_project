@@ -60,7 +60,7 @@ $('#theme-select').on('change', function() {
       cache: false, 
       success: function()
       	 {
-         alert("ok");
+         return;
       }
    });
 });
@@ -69,6 +69,21 @@ $('#theme-select').on('change', function() {
    </script>
 </head>
 <body>
+
+<nav class="topbar">
+   <div class="content">
+        <a href="index.php" class="logo"><h3>lorem</h3></a>
+        <a href="register_form.php" class="btn">register</a>
+        <a href="login_form.php" class="btn">log in</a>
+
+   <select name="theme-select" id="theme-select" class="btn" onload="setTheme(this.value);">
+       <option value="light" class="btn">Light</option>
+       <option value="dark" class="btn">Dark</option>
+       <option value="gruvbox" class="btn">Gruvbox</option>
+       <option value="mocha" class="btn">mocha</option>
+    </select>
+   </div>
+</nav>
    
 <div class="container">
 
@@ -81,17 +96,8 @@ $('#theme-select').on('change', function() {
       <h3>hi, <span>user</span></h3>
       <h1>welcome <span><?php echo $_SESSION['user_name'] ?></span></h1>
       <p>this is an user page</p>
-      <a href="login_form.php" class="btn">login</a>
-      <a href="register_form.php" class="btn">register</a>
       <a href="logout.php" class="btn">logout</a>
       <a href="settings_form.php" class="btn">settings</a>
-<br><br>
-
-      <select name="theme-select" id="theme-select" class="btn" onload="setTheme(this.value);">
-       <option value="light" class="btn">Light</option>
-       <option value="dark" class="btn">Dark</option>
-       <option value="gruvbox" class="btn">Gruvbox</option>
-       <option value="catpuccin" class="btn">Catppuccin</option>
    </div>
 
 </div>

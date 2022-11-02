@@ -35,12 +35,12 @@ if(isset($_POST['submit'])){
 
       if($row['user_type'] == 'admin'){
 
-         $_SESSION['admin_name'] = $row['name'];
+         $_SESSION['admin_name'] = $name;
          header('location:admin_page.php');
 
       }elseif($row['user_type'] == 'user'){
 
-         $_SESSION['user_name'] = $row['name'];
+         $_SESSION['user_name'] = $name;
          header('location:user_page.php');
 
       }
